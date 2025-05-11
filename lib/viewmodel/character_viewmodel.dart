@@ -26,6 +26,8 @@ class CharacterViewModel extends ChangeNotifier {
   Character? _selected;
   Character? get selectedCharacter => _selected;
 
+  get errorMessage => null;
+
   /// Carga la primera página (o tras cambiar filtro)
   Future<void> fetchCharacters([String filter = '']) async {
     _currentPage = 1;
